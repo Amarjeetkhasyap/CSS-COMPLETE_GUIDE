@@ -4,6 +4,7 @@ html {
     border: 5px solid white;
     margin: 15px;
     height: 2000px;
+    overflow: hidden;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     padding: 20px;
     border: 5px solid black;
     margin: 0;
+    overflow: hidden;
   }
   
 .parent {
@@ -18,6 +20,10 @@ body {
     padding: 20px;
     border: 5px solid black;
     margin: 0;
+    /* overflow: hidden; /*used this property to hide the overflow of child element*/
+    position: relative;
+    top: 90px;
+    
   }
   
 .parent div {
@@ -25,14 +31,27 @@ body {
     color: white;
     padding: 10px;
     border: 5px solid black;
-    /* margin: 10px; */
+    margin: 10px;
 }
 
-.child-1{
+
+/*fixed positioning */
+
+/* .child-1{
   position: fixed;
   top:0;
   left: 0;
   width: 100%;
   box-sizing: border-box ;
 
-}
+} */
+
+
+
+/* Relative positioning with overflow condition*/
+
+/* .parent .child-1{
+  position: relative;
+  top: 160px;
+  left: 50px;
+} */
