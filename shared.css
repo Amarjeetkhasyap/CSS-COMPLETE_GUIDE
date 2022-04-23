@@ -37,6 +37,29 @@ body{
     vertical-align: middle;
 }
 
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+  }
+  
+
 /* brand logo styling */
 
 .main-header__brand{
@@ -47,6 +70,7 @@ body{
     height: 22px;
     /* width: 20px; */
     display: inline-block;
+    vertical-align: middle;
 
 }
 
@@ -58,7 +82,7 @@ body{
 .main_nav {
     display: inline-block;
     text-align: right;
-    width: calc(100% - 75px);
+    width: calc(100% - 122px);
     vertical-align: middle;
 }
 
@@ -76,11 +100,12 @@ body{
     margin: 0 16px;
 
 }
-.main_nav__item a{
+.main_nav__item a,
+.mobile-nav__item a{
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    padding: 3px 0;
+    padding: 0.2rem 0;
 }
 
 .main_nav__item a:hover,
@@ -91,16 +116,19 @@ body{
 
 }
 
-.main_nav__item--cta a{
+.main_nav__item--cta a,
+.mobile-nav__item--cta a{
     color: white;
     background-color: #ff1b68;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
 
 }
 
 .main_nav__item--cta a:hover,
-.main_nav__item--cta a:active{
+.main_nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active{
     color: #ff1b68;
     background: white;
     border: none;
@@ -165,3 +193,39 @@ body{
 .button:focus{
     outline: none;
 }
+
+
+/* new navbar css */
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 80%;
+    height: 100vh;
+  }
+  
+  .mobile-nav__items {
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 10% auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .mobile-nav__item {
+    margin: 1rem 0;
+  }
+  
+  .mobile-nav__item a {
+    font-size: 1.5rem;
+  }
+
+
+  .open {
+      display: block !important;
+  }
