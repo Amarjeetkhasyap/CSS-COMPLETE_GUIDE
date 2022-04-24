@@ -208,6 +208,12 @@ main{
     outline: none;
 }
 
+.button[disabled]{
+    cursor: not-allowed;
+    border: #ccc;
+    background: #a1a1aa;
+}
+
 
 /* new navbar css */
 
